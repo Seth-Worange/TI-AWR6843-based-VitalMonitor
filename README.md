@@ -2,14 +2,12 @@
 
 <div align="center">
   
-![Project Banner](./docs/images/banner.png)
 
 **Multi-modal sleep monitoring system combining mmWave radar and computer vision**
 
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.5+-green.svg)](https://opencv.org/)
 [![TI Radar](https://img.shields.io/badge/Radar-TI_AWR6843-red.svg)](https://www.ti.com/product/AWR6843)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 </div>
 
@@ -35,11 +33,6 @@ HoloSleep Monitor is an innovative non-contact sleep monitoring system that inte
 - **Real-time Dashboard**: Key metrics at a glance
 - **Historical Review**: Playback and analysis of sleep sessions
 
-## 🏗️ System Architecture
-
-<div align="center">
-<img src="./docs/images/system_architecture.png" width="800" alt="System Architecture">
-</div>
 
 ## 🛠️ Technical Stack
 
@@ -56,70 +49,6 @@ HoloSleep Monitor is an innovative non-contact sleep monitoring system that inte
 - **Data Visualization**: Matplotlib, PyQt5
 - **Communication**: PySerial
 
-## 📦 Installation & Setup
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/yourusername/holosleep-monitor.git
-cd holosleep-monitor
-```
-
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Install OpenPose
-```bash
-# For Ubuntu/Debian systems
-git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git
-cd openpose
-sudo bash ./scripts/ubuntu/install_deps.sh
-mkdir build && cd build
-cmake .. -DBUILD_PYTHON=ON
-make -j`nproc`
-sudo make install
-```
-
-### 4. Flash Radar Firmware
-1. Download and install [TI Uniflash](https://www.ti.com/tool/UNIFLASH)
-2. Connect AWR6843 via USB
-3. Flash `vital_signs.bin` to the board
-4. Set baud rate to 921600
-
-### 5. Configure System
-```bash
-cp config.example.yaml config.yaml
-# Edit config.yaml with your hardware settings
-```
-
-## 🚀 Quick Start
-
-### Basic Usage
-```bash
-python main.py
-```
-
-### With Custom Configuration
-```bash
-python main.py --config my_config.yaml
-```
-
-### Calibration Mode (First-time setup)
-```bash
-python main.py --calibrate
-```
-
-## 📊 Performance Metrics
-
-| Metric | Performance | Notes |
-|--------|-------------|-------|
-| Respiration Accuracy | >95% | Under stationary conditions |
-| Heart Rate Accuracy | >90% | Compared to medical devices |
-| Posture Recognition | >92% | 7 common sleep positions |
-| System Latency | <200ms | End-to-end processing |
-| Data Update Rate | 10 Hz | Fused radar + vision |
-
 ## 📈 Recognized Sleep Positions
 
 The system classifies 7 common sleep positions:
@@ -134,93 +63,7 @@ The system classifies 7 common sleep positions:
 | Fetal | 🧘 | Curled position | Common but may restrict breathing |
 | Turning | 🔄 | Transition between positions | Normal during sleep |
 
-## 🧪 Example Output
 
-<div align="center">
-<img src="./docs/images/demo_screenshot.png" width="900" alt="System Screenshot">
-<p><em>Real-time monitoring interface showing radar data, camera feed, and analytics</em></p>
-</div>
-
-## 🔧 Configuration
-
-Edit `config.yaml` to customize system behavior:
-
-```yaml
-system:
-  mode: "monitor"           # monitor, playback, or calibrate
-  data_logging: true
-  alert_system: true
-
-radar:
-  port: "/dev/ttyUSB0"      # Linux
-  # port: "COM3"            # Windows
-  baudrate: 921600
-  processing_window: 5      # seconds
-
-camera:
-  device_id: 0
-  resolution: [1280, 720]
-  fps: 30
-
-openpose:
-  model_directory: "./models"
-  net_resolution: "368x368"
-  render_threshold: 0.05
-
-classification:
-  model_path: "./models/pose_svm.pkl"
-  confidence_threshold: 0.7
-```
-
-## 📁 Project Structure
-
-```
-holosleep-monitor/
-├── main.py                 # Main application entry
-├── requirements.txt        # Python dependencies
-├── config.yaml            # Configuration file
-├── LICENSE                # MIT License
-│
-├── core/                  # Core system modules
-│   ├── monitor.py         # Main monitoring loop
-│   ├── data_fusion.py     # Radar-vision data fusion
-│   └── alert_manager.py   # Anomaly detection
-│
-├── radar/                 # Radar interface modules
-│   ├── awr6843.py        # Radar communication
-│   ├── parser.py         # Data packet parsing
-│   └── processor.py      # Vital signs extraction
-│
-├── vision/                # Computer vision modules
-│   ├── pose_detector.py  # OpenPose wrapper
-│   ├── classifier.py     # SVM posture classifier
-│   └── camera.py         # Camera management
-│
-├── gui/                   # User interface
-│   ├── main_window.py    # Main application window
-│   ├── radar_panel.py    # Radar data display
-│   ├── camera_panel.py   # Camera feed display
-│   └── analytics_panel.py# Data analytics display
-│
-├── models/               # Machine learning models
-│   ├── pose_svm.pkl     # Trained SVM classifier
-│   ├── label_encoder.pkl# Label encoder
-│   └── train_model.py   # Model training script
-│
-├── utils/                # Utility functions
-│   ├── helpers.py       # Helper functions
-│   ├── constants.py     # System constants
-│   └── logger.py        # Logging configuration
-│
-├── docs/                 # Documentation
-│   ├── hardware_setup.md# Hardware connection guide
-│   ├── calibration.md   # System calibration guide
-│   └── api_reference.md # API documentation
-│
-└── tests/               # Test scripts
-    ├── test_radar.py    # Radar module tests
-    └── test_vision.py   # Vision module tests
-```
 
 ## 🧠 Algorithm Details
 
@@ -242,7 +85,6 @@ This system enables various research applications:
 - **Post-surgery monitoring**: Non-contact patient observation
 - **Infant monitoring**: Safe, non-invasive baby monitoring
 - **Elderly care**: Fall detection and sleep pattern analysis
-
 
 
 
