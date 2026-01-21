@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="/new/loading">
+    <file>image/start.png</file>
+    <file>image/stop.png</file>
+    <file>image/loading1.gif</file>
+    <file>image/loading.png</file>
+    <file>image/lifeline-in-a-heart-outline.png</file>
+    <file>image/yes.png</file>
+  </qresource>
+</RCC>
