@@ -37,7 +37,7 @@ HoloSleep Monitor is an innovative non-contact sleep monitoring system that inte
 
 | Desktop Application | WeChat Mini Program |
 |---------------------|---------------------|
-| <div align="center"><img src="image/guidemo.gif" width="600"></div> | <div align="center"><img src="image/miniprogram.png" width="250"></div> |
+| <div align="center"><img src="image/guidemo.gif" width="600"></div> | <div align="center"><img src="image/miniprogram.png" width="280"></div> |
 | Comprehensive monitoring interface | Mobile mini-program for convenient viewing |
 
 
