@@ -58,17 +58,9 @@ HoloSleep Monitor is an innovative non-contact sleep monitoring system that inte
 
 ## 📈 Recognized Sleep Positions
 
-The system classifies 7 common sleep positions:
+The system classifies 8 common sleep positions:
 
-| Position | Icon | Description | Health Impact |
-|----------|------|-------------|---------------|
-| Supine | 🛌 | Flat on back | May cause snoring |
-| Supine Bent Legs | 🤰 | Back with bent knees | Reduces lower back stress |
-| Left Lateral | 👈 | On left side | Recommended for digestion |
-| Right Lateral | 👉 | On right side | Common position |
-| Prone | 🐢 | On stomach | May cause neck strain |
-| Fetal | 🧘 | Curled position | Common but may restrict breathing |
-| Turning | 🔄 | Transition between positions | Normal during sleep |
+<img src="image/sleeppose.png" alt="8 Sleep Positions" width="600">
 
 
 
