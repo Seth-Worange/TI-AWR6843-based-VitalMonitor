@@ -1,4 +1,0 @@
-{
-    "device_id": "669e794b5830dc113ecdd3ca_device1",
-    "secret": "12345678"
-}
