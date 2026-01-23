@@ -90,6 +90,7 @@ This system enables various research applications:
 
 ## 🙏 Acknowledgments
 
+- This project was developed with reference to mmVital-Signs（https://github.com/KylinC/mmVital-Signs）
 - Texas Instruments for AWR6843 radar hardware and SDK
 - CMU Perceptual Computing Lab for OpenPose
 - All open-source libraries that made this project possible
