@@ -1,0 +1,62 @@
+<!--pages/Vital_Monitor.wxml-->
+<view class="container">
+  <view class='breHeart-container'>
+    <image src="/pages/image/breathrate.png" class='breathrate-logo'></image>
+    <image src="/pages/image/heartrate1.png" class='heartrate-logo'></image>
+  </view>
+
+  <view style='font-family: Cascadia Mono; font-size:15px;'>
+    <text class='breHeartVal-motto'>Breath Rate</text>
+    <text>Heart Rate</text>
+  </view>
+
+  <view style='font-family: Cascadia Mono; font-size:15px;color: rgb(206, 61, 61);'>
+    <text class='rate-motto'>{{breath_rate}}</text>
+    <text>{{heart_rate}}</text>
+  </view>
+
+
+  <view style='font-family: Cascadia Mono; font-size:13px;'>
+    <text class='times-motto'>times/min</text>
+    <text>times/min</text>
+  </view>
+
+  <view class="page__hd">
+    <view class="weui-panel border-shadow">
+      <navigator url="" hover-class="none">
+        <view class="weui-panel__hd">
+          {{theDay}}
+        </view>
+      </navigator>
+      <view class="line">
+      </view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg" >
+          <block>
+            <view class="weui-media-box__hd_in-appmsg">
+              {{sleepQualityScore}}
+            </view>
+            <view class="weui-media-box_text">
+              {{sleepAnalysis}}
+            </view>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='button-container'>
+    <button type="primary" bindtap="touchBtn_getshadow">Start</button>
+    <button type="warn" bindtap="touchBtn_stop">Stop</button>
+  </view>
+
+  <view class='vital-container'>
+    <image src="/pages/image/vitalsigns.png" class='vital-logo'></image>
+  </view>
+
+  <view class='bottom-text'>
+    <view style='font-family: Times New Roman; font-size:14px;'>
+      <text>© Group AWR6843</text>
+    </view>
+  </view>
+</view>

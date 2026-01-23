@@ -1,0 +1,153 @@
+/* pages/Vital_Monitor.wxss */
+page{
+  height: 100%;
+  background: rgba(236, 253, 162, 0.151);
+}
+/* .main{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;  
+  text-align: center；
+} */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.vital-logo {
+  width: 280px;
+  height: 110px;
+}
+
+.vital-container{
+  margin-top: 20px;
+}
+
+.button-container{
+  margin-top: 30px;
+}
+
+.breathrate-logo {
+  width: 64px;
+  height: 64px;
+  margin-right: 100px;
+}
+
+.heartrate-logo{
+  width: 64px;
+  height: 64px;
+  margin-top: 10px;
+}
+
+.breHeart-container{
+  margin-top: 5px;
+}
+
+/*新增小程序组件*/
+.page__bd, .weui-panel {
+  margin-top: 40rpx;
+}
+
+.page__hd {
+  padding: 20rpx 35rpx 0 35rpx;
+}
+
+.weui-footer {
+  margin: 50rpx 0;
+}
+
+.weui-center {
+  text-align: center;
+}
+
+.border-shadow {
+  border: 1px #dee1e8 solid;
+  border-radius: 15rpx;
+  box-shadow: 0 10rpx 35rpx #dee1e8;
+}
+
+.border-shadow .weui-panel__hd {
+  padding: 15rpx 30rpx 15rpx;
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weui-panel__hd {
+  color: #333;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+.weui-panel__hd:after {
+  left: 0px;
+}
+
+.border-shadow .weui-media-box__info {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.border-shadow .weui-media-box_text {
+  align-items: center;
+  /* margin-top: 0;
+  padding-bottom: 0; */
+}
+
+.border-shadow .weui-media-box {
+  padding: 30rpx;
+}
+
+.border-shadow .weui-media-box__hd_in-appmsg {
+  font-size: 80rpx;
+  font-weight: bolder;
+  color: #43b0d1;
+  width:317px;
+  height:60px;
+  line-height:60px;
+  text-align:center
+}
+
+.border-shadow .weui-media-box__thumb {
+  height: 48px;
+  width: 48px;
+}
+
+
+.page__hd .weui-media-box__title {
+  font-size: 30rpx;
+}
+
+.page__hd .weui-panel__hd {
+  font-size: 30rpx;
+}
+
+/* 黑线 使得产生阴影效果 */
+.line {
+  display: flex;
+  width: 100%;
+  height: 3rpx;
+  background: lightgray;
+}
+
+.breHeartVal-motto{
+  margin-right: 74px;
+}
+
+.rate-motto{
+  margin-right: 135px;
+  text-align: center；
+}
+
+.times-motto{
+  margin-right: 103px;
+}
+
+.bottom-text{
+  margin-top: 10px;
+}

@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/Vital_Monitor/Vital_Monitor",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Vital Sign Monitor",
+    "navigationBarBackgroundColor": "#FFE4B5"
+  },
+  "tabBar": {
+    "color":"#0000",
+    "selectedColor":"#0000ff",
+    "backgroundColor":"#FFE4B5",
+    "borderStyle":"black",
+    "list":[
+        {      
+          "pagePath":"pages/Vital_Monitor/Vital_Monitor",
+          "text":"Home",
+          "iconPath":"pages/image/main.png",
+          "selectedIconPath": "pages/image/main_sel.png"
+        },
+        {
+          "pagePath":"pages/logs/logs",
+          "text":"Logs",
+          "iconPath":"pages/image/log.png",
+          "selectedIconPath": "pages/image/log_sel.png"     
+        }
+      ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
